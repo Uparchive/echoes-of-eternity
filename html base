@@ -23,7 +23,7 @@
 </head>
 <body>
     <!-- Identificação do capítulo com classe "capitulo" e id "capitulo2" -->
-    <div class="container capitulo" id="capitulo00">
+    <div class="container capitulo" id="nomedolivro00">
         <h1 class="chapter-number">Capítulo 0</h1>
         <h2 class="chapter-title">Nome do Capitulo</h2>
         <p></p>
@@ -35,9 +35,9 @@
         <p></p>
         <div class="buttons">
             <div class="buttons">
-                <button class="previous" onclick="navigateTo('capitulo00.html')">Anterior</button>
+                <button class="previous" onclick="navigateTo('nomedolivro0.html')">Anterior</button>
                 <button class="index" onclick="navigateTo('indice.html')">Índice</button>
-                <button class="next" onclick="navigateTo('capitulo00.html')">Próximo</button>
+                <button class="next" onclick="navigateTo('nomedolivro0.html')">Próximo</button>
             </div>            
         </div>
     </div>
