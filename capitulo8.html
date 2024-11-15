@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capítulo 8</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="responsive.js" defer></script>
+    <script src="script.js" defer></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Salvar o ID do capítulo atual no localStorage
+            const currentChapterId = document.querySelector(".capitulo").id;
+            setLastRead(currentChapterId);
+        });
+
+        // Função para salvar o capítulo atual no localStorage
+        function setLastRead(chapterId) {
+            localStorage.setItem("lastReadChapter", chapterId);
+            console.log("Capítulo salvo no localStorage:", chapterId); // Log para debug
+        }
+    </script>
+</head>
+<body>
+    <!-- Identificação do capítulo com classe "capitulo" e id "capitulo8" -->
+    <div class="container capitulo" id="capitulo8">
+        <h1 class="chapter-number">Capítulo 8</h1>
+        <h2 class="chapter-title">Fragmentos do Infinito</h2>
+        <p>Kael e Elyse deixaram a Vigília dos Guardiões com a lâmina temporal nas mãos e um peso ainda maior nos ombros. A promessa do sacrifício pairava sobre eles, e a incerteza do que viria a seguir era quase insuportável.</p>
+        <p>Enquanto caminhavam pela floresta densa, Kael começou a sentir uma conexão cada vez mais intensa com o artefato. Era como se a lâmina estivesse viva, murmurando segredos e memórias de outras linhas do tempo.</p>
+        <p>"Você está bem?" Elyse perguntou, observando a expressão distante de Kael.</p>
+        <p>"A lâmina está me mostrando algo," ele respondeu, tentando compreender as imagens que passavam por sua mente. "Fragmentos de tempos diferentes... histórias que não são minhas, mas que, de alguma forma, estão ligadas a mim."</p>
+        <p>Eles chegaram a um descampado iluminado pela luz do Relógio Celestial. No centro, havia uma estrutura quebrada, com fragmentos espalhados pelo chão. Kael sentiu sua respiração acelerar. Ele reconhecia o lugar. Era onde a Fenda Temporal começou.</p>
+        <p>"Este é o início," Elyse disse, olhando ao redor. "Os primeiros Guardiões tentaram estabilizar as linhas do tempo aqui, mas falharam."</p>
+        <p>Kael caminhou até o centro do descampado e segurou a lâmina com mais força. Ele sabia que precisava usar o artefato, mas não sabia como.</p>
+        <p>"Você precisa confiar em si mesmo," Elyse disse, colocando a mão sobre o ombro dele. "O Guardião te escolheu por um motivo."</p>
+        <p>Kael fechou os olhos e concentrou-se. A lâmina começou a brilhar, e ele sentiu uma onda de energia o envolvendo. Quando abriu os olhos novamente, estava em um espaço diferente — um vazio infinito, repleto de estrelas e fragmentos de tempo flutuando ao redor.</p>
+        <p>Uma voz ecoou pelo vazio. "Kael Rhyse, você está diante do Infinito. Aqui, todas as linhas do tempo convergem, e é aqui que você deve fazer sua escolha."</p>
+        <p>Kael viu imagens ao seu redor: vidas que poderiam ter sido, futuros que poderiam existir, e passados que já haviam sido apagados. Ele sentiu uma conexão profunda com tudo aquilo, como se estivesse olhando para pedaços de si mesmo espalhados pelo tempo.</p>
+        <p>"O que eu devo fazer?" Kael perguntou, sua voz tremendo diante da imensidão do lugar.</p>
+        <p>"Sacrifique um fragmento de sua própria linha do tempo," a voz respondeu. "Escolha um momento que defina quem você é e permita que ele seja reescrito."</p>
+        <p>Kael sentiu um nó na garganta. Ele sabia o que isso significava. Uma memória, um pedaço de sua vida, seria apagado para sempre. Ele pensou em sua infância, nos momentos que o moldaram, e em Elyse, que havia estado ao seu lado durante toda a jornada.</p>
+        <p>"E se eu escolher errado?" ele perguntou.</p>
+        <p>"Não há escolha errada," a voz respondeu. "Há apenas o equilíbrio."</p>
+        <p>Kael segurou a lâmina e fechou os olhos, deixando suas memórias fluírem. Ele viu um momento específico: o dia em que havia descoberto sua conexão com os ecos do tempo. Era uma memória importante, mas também era uma fonte constante de dor.</p>
+        <p>"Eu escolho este fragmento," ele disse, segurando a lâmina sobre a memória.</p>
+        <p>A lâmina brilhou intensamente, e Kael sentiu uma dor profunda enquanto o fragmento de sua memória desaparecia. Quando abriu os olhos, estava de volta ao descampado, com Elyse ao seu lado.</p>
+        <p>"Kael, você está bem?" Elyse perguntou, preocupada.</p>
+        <p>Ele respirou fundo, sentindo-se diferente, mas também mais leve. "Acho que sim. O tempo parece... mais estável."</p>
+        <p>Elyse olhou ao redor e sorriu. "Você fez o sacrifício. Agora, temos uma chance de salvar tudo."</p>
+        <p>Kael olhou para o céu, onde o Relógio Celestial brilhava mais forte do que nunca. Ele sabia que a luta ainda não havia terminado, mas pela primeira vez, sentia esperança.</p>
+        <div class="buttons">
+            <button class="previous" onclick="navigateTo('capitulo7.html')">Anterior</button>
+            <button class="index" onclick="navigateTo('indice.html')">Índice</button>
+            <button class="next" onclick="navigateTo('capitulo9.html')">Próximo</button>
+        </div>
+    </div>
+    <script>
+        function navigateTo(url) {
+            const currentChapterId = document.querySelector(".capitulo").id;
+            setLastRead(currentChapterId);
+            window.location.href = url;
+        }
+    </script>
+</body>
+</html>

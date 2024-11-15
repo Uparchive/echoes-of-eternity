@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capítulo 1</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="responsive.js" defer></script>
+    <script src="script.js" defer></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Salvar o ID do capítulo atual no localStorage
+            const currentChapterId = document.querySelector(".capitulo").id;
+            setLastRead(currentChapterId);
+        });
+
+        // Função para salvar o capítulo atual no localStorage
+        function setLastRead(chapterId) {
+            localStorage.setItem("lastReadChapter", chapterId);
+            console.log("Capítulo salvo no localStorage:", chapterId); // Log para debug
+        }
+    </script>
+</head>
+<body>
+    <!-- Identificação do capítulo com classe "capitulo" e id "capitulo1" -->
+    <div class="container capitulo" id="capitulo1">
+        <h1 class="chapter-number">Capítulo 1</h1>
+        <h2 class="chapter-title">O Relógio Celestial</h2>
+        <p>Kael Rhyse acordou com a sensação de que algo estava errado. O brilho dourado do Relógio Celestial iluminava as ruas da Cidade Alta, enquanto as sombras dançavam sobre as torres. O Relógio, um artefato lendário que controlava o fluxo do tempo, parecia mais brilhante do que o normal naquela manhã.</p>
+        <p>Desde que conseguia se lembrar, Kael sentia os ecos do tempo — fragmentos de momentos passados que surgiam sem aviso. Alguns viam isso como um dom, outros como uma maldição. Ele, por outro lado, nunca teve escolha.</p>
+        <p>Ao atravessar as ruas silenciosas, ele percebeu que algo estava errado. As engrenagens gigantes do Relógio Celestial estavam girando em uma velocidade incomum, e as linhas temporais que ele costumava sentir estavam instáveis, como cordas prestes a se romper.</p>
+        <p>"Kael!" Uma voz o chamou. Era Elyse, uma amiga de infância e uma Guardiã do Tempo. "Você também está sentindo isso, não está?"</p>
+        <p>Kael assentiu, ainda olhando para o céu. "O tempo... está quebrando."</p>
+        <p>Elyse explicou que o Conselho da Cidade Alta estava tentando manipular o Relógio para reescrever o passado, mas algo havia dado errado. "Se não fizermos nada, todas as linhas do tempo podem colapsar."</p>
+        <p>Kael sabia que precisava agir. Era hora de enfrentar o que ele temia: o Relógio Celestial e os segredos que ele guardava.</p>
+        <div class="buttons">
+            <button class="previous" onclick="navigateTo('index.html')">Anterior</button>
+            <button class="index" onclick="navigateTo('indice.html')">Índice</button>
+            <button class="next" onclick="navigateTo('capitulo2.html')">Próximo</button>
+        </div>
+    </div>
+    <script>
+        function navigateTo(url) {
+            const currentChapterId = document.querySelector(".capitulo").id;
+            setLastRead(currentChapterId);
+            window.location.href = url;
+        }
+    </script>
+</body>
+</html>

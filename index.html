@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Echoes Of Eternity - ChatGPT 4o</title>
+    <link rel="stylesheet" href="capastyle.css">
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Verifica se há um último capítulo lido no localStorage
+            const lastReadChapter = localStorage.getItem("lastReadChapter");
+            const continueButton = document.getElementById("continue-button");
+
+            if (lastReadChapter) {
+        // Se houver um último capítulo lido, mostra "Continuar Leitura" e redireciona para o arquivo correto do capítulo
+        continueButton.textContent = "Continuar Leitura";
+        continueButton.href = `${lastReadChapter}.html`; // Redireciona para o arquivo HTML do último capítulo lido
+             } else {
+                // Se não houver, mostra "Iniciar Leitura" e redireciona para o Capítulo 1
+                continueButton.textContent = "Iniciar Leitura";
+                continueButton.href = "capitulo1.html"; // Redireciona para o Capítulo 1
+            }
+        });
+
+        // Função para salvar o capítulo atual no localStorage
+        function setLastRead(chapterId) {
+            localStorage.setItem("lastReadChapter", chapterId);
+        }
+    </script>    
+</head>
+<body>
+    <div class="container">
+        <a href="indice.html">
+            <img src="https://firebasestorage.googleapis.com/v0/b/armazene-acd30.appspot.com/o/uploads%2Fz0wQUWxFhKRBeMLIHIjOHd1dpHn2%2FDALL%C2%B7E%202024-11-14%2021.26.36%20-%20A%20captivating%20book%20cover%20designed%20as%20a%20mobile%20phone%20wallpaper.%20The%20scene%20depicts%20a%20futuristic%20city%20skyline%20at%20dusk%2C%20bathed%20in%20hues%20of%20gold%20and%20purple.webp?alt=media&token=da46f09c-af57-4374-90b9-222705e6b8e9" alt="Capa do livro 365 Dias Diversos" class="book-cover">
+        </a>
+        <h1 class="book-title">Ecos da Eternidade</h1>
+        <h2 class="book-subtitle">"O tempo não é um rio, mas um oceano — e cada eco molda a maré."</h2>
+        <p class="author-name">ChatGPT 4o</p>
+        <div class="buttons">
+            <a id="continue-button" href="#" class="button">Iniciar Leitura</a>
+        </div>
+    </div>
+</body>
+</html>

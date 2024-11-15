@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capítulo 00</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="responsive.js" defer></script>
+    <script src="script.js" defer></script> <!-- Referência ao script.js -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Salvar o ID do capítulo atual no localStorage
+            const currentChapterId = document.querySelector(".capitulo").id;
+            setLastRead(currentChapterId);
+        });
+
+        // Função para salvar o capítulo atual no localStorage
+        function setLastRead(chapterId) {
+            localStorage.setItem("lastReadChapter", chapterId);
+            console.log("Capítulo salvo no localStorage:", chapterId); // Log para debug
+        }
+    </script>
+</head>
+<body>
+    <!-- Identificação do capítulo com classe "capitulo" e id "capitulo2" -->
+    <div class="container capitulo" id="capitulo00">
+        <h1 class="chapter-number">Capítulo 0</h1>
+        <h2 class="chapter-title">Nome do Capitulo</h2>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <div class="buttons">
+            <div class="buttons">
+                <button class="previous" onclick="navigateTo('capitulo00.html')">Anterior</button>
+                <button class="index" onclick="navigateTo('indice.html')">Índice</button>
+                <button class="next" onclick="navigateTo('capitulo00.html')">Próximo</button>
+            </div>            
+        </div>
+    </div>
+    <script>
+        function navigateTo(url) {
+            const currentChapterId = document.querySelector(".capitulo").id;
+            setLastRead(currentChapterId);
+            window.location.href = url;
+        }
+    </script>
+</body>
+</html>
