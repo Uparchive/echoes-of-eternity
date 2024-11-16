@@ -2,8 +2,16 @@ document.addEventListener("DOMContentLoaded", function() {
     const pages = document.querySelectorAll('.page');
     let currentPage = 0;
 
+    // Identifique o livro atual (exemplo: usando um atributo data no body)
+    const currentBook = document.body.dataset.bookId || "echoesofeternity"; // Exemplo: 'NomeDoSeuLivro'
+
+    // Função para obter o nome do armazenamento local com base no livro
+    function getStorageKey() {
+        return `${currentBook}_lastReadChapter`;
+    }
+
     // Recupera o último capítulo lido do localStorage
-    const lastReadChapter = localStorage.getItem("lastReadChapter");
+    const lastReadChapter = localStorage.getItem(getStorageKey());
     if (lastReadChapter && !isNaN(parseInt(lastReadChapter))) {
         currentPage = parseInt(lastReadChapter);
         // Aplica a classe 'flip' nas páginas anteriores ao último capítulo lido
@@ -42,7 +50,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Função para atualizar o último capítulo lido no localStorage
     function setLastReadChapter(chapterIndex) {
-        localStorage.setItem("lastReadChapter", chapterIndex);
+        localStorage.setItem(getStorageKey(), chapterIndex);
     }
 
     // Função para atualizar o destaque no capítulo atual
